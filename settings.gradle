@@ -1,0 +1,2 @@
+include ':app', ':splash_screen', ':contacts', ':contacts_app'
+rootProject.name='My Application'

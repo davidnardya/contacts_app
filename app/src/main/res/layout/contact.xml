@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    //Guide Lines
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL20H"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL30H"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.3"
+        />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL40H"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL50H"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        />
+    
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL60H"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL70H"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="550dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL80H"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.8"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL90H"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9"
+        />
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL25V"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25"
+        />
+    
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL50V"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/GL75V"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75"
+        />
+
+    //TextView Left
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/GL20H"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Create new contact"
+        style="@style/Buttons"
+        android:textAlignment="center"
+        android:gravity="center"
+
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@id/GL50V"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/GL20H"
+        app:layout_constraintBottom_toTopOf="@id/GL30H"
+        android:text="First name:"
+        style="@style/Category"
+
+
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@id/GL50V"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/GL30H"
+        app:layout_constraintBottom_toTopOf="@id/GL40H"
+        android:text="Last name:"
+        style="@style/Category"
+
+
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@id/GL50V"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/GL40H"
+        app:layout_constraintBottom_toTopOf="@id/GL50H"
+        android:text="Phone:"
+        style="@style/Category"
+
+
+        />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toLeftOf="@id/GL50V"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/GL50H"
+        app:layout_constraintBottom_toTopOf="@id/GL60H"
+        android:text="E-Mail:"
+        style="@style/Category"
+
+
+        />
+
+    <EditText
+        android:id="@+id/insertFirstName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/GL50V"
+        app:layout_constraintTop_toTopOf="@id/GL20H"
+        app:layout_constraintBottom_toTopOf="@id/GL30H"
+        android:inputType="textPersonName"
+        android:hint="Enter your first name"
+         />
+
+    <EditText
+        android:id="@+id/insertLastName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/GL50V"
+        app:layout_constraintTop_toTopOf="@id/GL30H"
+        app:layout_constraintBottom_toTopOf="@id/GL40H"
+        android:inputType="textPersonName"
+        android:hint="Enter your last name"
+        />
+
+    <EditText
+        android:id="@+id/insertPhone"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/GL50V"
+        app:layout_constraintTop_toTopOf="@id/GL40H"
+        app:layout_constraintBottom_toTopOf="@id/GL50H"
+        android:ems="10"
+        android:inputType="phone"
+        android:hint="Enter your phone number"
+
+        />
+
+    <EditText
+        android:id="@+id/insertEmail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/GL50V"
+        app:layout_constraintTop_toTopOf="@id/GL50H"
+        app:layout_constraintBottom_toTopOf="@id/GL60H"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:hint="Enter your email"
+
+         />
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="@id/GL75V"
+        app:layout_constraintLeft_toLeftOf="@id/GL25V"
+        app:layout_constraintTop_toTopOf="@id/GL60H"
+        app:layout_constraintBottom_toTopOf="@id/GL70H"
+        android:text="Submit"
+        style="@style/Submit"
+
+        />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintRight_toRightOf="@id/GL75V"
+        app:layout_constraintLeft_toLeftOf="@id/GL25V"
+        app:layout_constraintTop_toTopOf="@id/GL80H"
+        app:layout_constraintBottom_toTopOf="@id/GL90H"
+        android:text="Allow text"
+         />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
