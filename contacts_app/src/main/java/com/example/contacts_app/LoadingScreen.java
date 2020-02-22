@@ -4,14 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.widget.LinearLayout;
+
+import java.util.Random;
 
 public class LoadingScreen extends AppCompatActivity {
 
+    Random random = new Random();
     int counter = 0;
-    Runnable runnable2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +24,25 @@ public class LoadingScreen extends AppCompatActivity {
 
         final Handler handler = new Handler();
 
+        for (int i = 0; i < 4; i++) {
+        Runnable runnable2 = new Runnable() {
+            @Override
+            public void run() {
+                LinearLayout layout1 = findViewById(R.id.layout_1);
+                layout1.setBackgroundColor(Color.parseColor(randomColor()));
+
+                LinearLayout layout2 = findViewById(R.id.layout_2);
+                layout2.setBackgroundColor(Color.parseColor(randomColor()));
+
+                LinearLayout layout3 = findViewById(R.id.layout_3);
+                layout3.setBackgroundColor(Color.parseColor(randomColor()));
+
+                LinearLayout layout4 = findViewById(R.id.layout_4);
+                layout4.setBackgroundColor(Color.parseColor(randomColor()));
+            }
+        };
+        handler.postDelayed(runnable2,1000);
+        }
 
         Runnable runnable = new Runnable() {
             @Override
@@ -31,7 +55,11 @@ public class LoadingScreen extends AppCompatActivity {
             }
         };
 
-        handler.postDelayed(runnable,3000); //delays launch by 3 seconds
+        handler.postDelayed(runnable,4000); //delays launch by 3 seconds
+
+
+
+
     }
 
 
@@ -62,5 +90,14 @@ public class LoadingScreen extends AppCompatActivity {
         Intent intent = new Intent(LoadingScreen.this, Contacts.class);
         startActivity(intent); //sends user to intent activity
         finish(); //deletes from activity stack
+    }
+
+    private String randomColor(){
+        int red = random.nextInt(89)+10;
+        int green = random.nextInt(89)+10;
+        int blue = random.nextInt(89)+10;
+
+        String color = "#" + red + green + blue;
+        return color;
     }
 }
