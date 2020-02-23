@@ -24,44 +24,36 @@ public class LoadingScreen extends AppCompatActivity {
 
         final Handler handler = new Handler();
 
-        for (int i = 0; i < 4; i++) {
-        Runnable runnable2 = new Runnable() {
+        handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                LinearLayout layout1 = findViewById(R.id.layout_1);
-                layout1.setBackgroundColor(Color.parseColor(randomColor()));
+                counter++;
+                if(counter <= 4){
+                    LinearLayout layout1 = findViewById(R.id.layout_1);
+                    layout1.setBackgroundColor(Color.parseColor(randomColor()));
 
-                LinearLayout layout2 = findViewById(R.id.layout_2);
-                layout2.setBackgroundColor(Color.parseColor(randomColor()));
+                    LinearLayout layout2 = findViewById(R.id.layout_2);
+                    layout2.setBackgroundColor(Color.parseColor(randomColor()));
 
-                LinearLayout layout3 = findViewById(R.id.layout_3);
-                layout3.setBackgroundColor(Color.parseColor(randomColor()));
+                    LinearLayout layout3 = findViewById(R.id.layout_3);
+                    layout3.setBackgroundColor(Color.parseColor(randomColor()));
 
-                LinearLayout layout4 = findViewById(R.id.layout_4);
-                layout4.setBackgroundColor(Color.parseColor(randomColor()));
-            }
-        };
-        handler.postDelayed(runnable2,1000);
-        }
-
-        Runnable runnable = new Runnable() {
-            @Override
-            public void run() {
-                if (checkLoggedIn()){
+                    LinearLayout layout4 = findViewById(R.id.layout_4);
+                    layout4.setBackgroundColor(Color.parseColor(randomColor()));
+                    handler.postDelayed(this, 1000);
+                } else {
+                    if (checkLoggedIn()) {
                     sendToContacts();
                 } else {
                     sendToSignUp();
                 }
+                }
+
             }
-        };
 
-        handler.postDelayed(runnable,4000); //delays launch by 3 seconds
-
-
-
-
+        }, 1000);
+        
     }
-
 
 
     private boolean checkLoggedIn (){
