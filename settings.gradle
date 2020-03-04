@@ -1,2 +1,2 @@
-include ':app', ':splash_screen', ':contacts', ':contacts_app'
+include ':app', ':splash_screen', ':contacts', ':contacts_app', ':recycler_view', ':viewtype', ':lesson11', ':lesson12'
 rootProject.name='My Application'

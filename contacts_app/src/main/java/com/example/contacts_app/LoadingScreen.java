@@ -24,21 +24,20 @@ public class LoadingScreen extends AppCompatActivity {
 
         final Handler handler = new Handler();
 
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 counter++;
+                LinearLayout layout1, layout2, layout3, layout4;
+                layout1= findViewById(R.id.layout_1);
+                layout2= findViewById(R.id.layout_2);
+                layout3= findViewById(R.id.layout_3);
+                layout4= findViewById(R.id.layout_4);
                 if(counter <= 4){
-                    LinearLayout layout1 = findViewById(R.id.layout_1);
                     layout1.setBackgroundColor(Color.parseColor(randomColor()));
-
-                    LinearLayout layout2 = findViewById(R.id.layout_2);
                     layout2.setBackgroundColor(Color.parseColor(randomColor()));
-
-                    LinearLayout layout3 = findViewById(R.id.layout_3);
                     layout3.setBackgroundColor(Color.parseColor(randomColor()));
-
-                    LinearLayout layout4 = findViewById(R.id.layout_4);
                     layout4.setBackgroundColor(Color.parseColor(randomColor()));
                     handler.postDelayed(this, 1000);
                 } else {
@@ -52,7 +51,7 @@ public class LoadingScreen extends AppCompatActivity {
             }
 
         }, 1000);
-        
+
     }
 
 
