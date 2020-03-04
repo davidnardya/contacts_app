@@ -1,9 +1,9 @@
-package com.example.lesson12;
+package com.example.lesson12.POJO;
 
 public class Family extends Person {
 
     public Family() {
-        this.name = "Family name";
+        super("Family name");
         this.phone = "Family number";
     }
 
